@@ -18,7 +18,7 @@ news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 ---
 
-Hi! I’m **Erick**, a senior undergraduate student in **Data Science and Mathematics Engineering** at [Tecnológico de Monterrey](https://tec.mx/en), expecting to graduate in 2026. My research journey is driven by the convergence of rigorous mathematical abstraction and the predictive power of modern computation.
+Hi! I’m **Erick**, a senior undergraduate student in **Data Science and Mathematics Engineering** at [Tecnológico de Monterrey](https://tec.mx/en), expecting to graduate in June 2026. My research journey is driven by the convergence of rigorous mathematical abstraction and the predictive power of modern computation.
 
 My research interests lie at the intersection of **Artificial Intelligence, Physics, and Mathematics**, with a specific focus on:
 
