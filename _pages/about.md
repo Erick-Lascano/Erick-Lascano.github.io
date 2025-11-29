@@ -22,7 +22,7 @@ Hi! I’m **Erick**, a senior undergraduate student in **Data Science and Mathem
 
 My research interests lie at the intersection of **Artificial Intelligence, Physics, and Mathematics**, with a specific focus on:
 
-* **AI for Science:** I am interested in uncovering governing physical laws from data using methods like **Koopman Operator Theory (HAVOK)** and discovering how neural networks can model complex dynamical systems.
+* **AI for Science:** I am interested in uncovering governing physical laws from data using methods and discovering how neural networks can model complex dynamical systems.
 * **Geometric & Topological Deep Learning:** Applying concepts from pure mathematics—such as **Persistent Homology** and **Topological Data Analysis (TDA)**—to capture structural invariants in data that standard embeddings miss.
 * **Quantitative Modeling & Stochastic Processes:** Leveraging stochastic optimization and graph algorithms to model volatility in financial markets and detect anomalies in high-volume transaction pipelines.
 
