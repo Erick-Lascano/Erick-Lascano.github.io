@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: 
-profile:
+profile: 
   align: right
   image: rosegarden.png
   image_circular: false # crops the image to make it circular
