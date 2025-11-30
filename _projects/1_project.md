@@ -50,13 +50,4 @@ The dataset used in this project is courtesy of Kaggle: [Top Spotify Songs 2023]
 
 This project applies concepts from the course and the instructor's book, *"Effective Pandas: Patterns for Data Manipulation"* by Matt Harrison.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/spotify_dashboard.jpg" title="Data Overview" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <p><strong>Future Work:</strong> I plan to extend this analysis by integrating the Spotify API to pull real-time audio features and predict the popularity of new releases based on the identified clusters.</p>
-        <p><strong>Contributing:</strong> Contributions are welcome! Please create a pull request or open an issue to discuss improvements.</p>
-        <p><strong>License:</strong> This project is licensed under the MIT License.</p>
-    </div>
-</div>
+
