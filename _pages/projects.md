@@ -191,4 +191,4 @@ pagination:
 
 {% if page.pagination.enabled %}
 {% include pagination.liquid %}
-{% endif %} https://github.com/Erick-Lascano/Data-Analysis-with-Python-Stanford-Continuing-Studies-CS-65W
+{% endif %} 
