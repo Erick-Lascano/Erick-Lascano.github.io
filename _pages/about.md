@@ -9,7 +9,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Erick Lascano</p>
-    <p>Data Scientist & Mathematician</p>
+    <p>Data Scientist and Mathematical Engineer</p>
     <p>Email: A00836571@tec.mx</p>
     <p>or ericklascano99@gmail.com</p>
 
