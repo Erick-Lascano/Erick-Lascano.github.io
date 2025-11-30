@@ -5,7 +5,7 @@ permalink: /projects/
 description: A selection of projects in Data Science and Applied Mathematics.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [Data Science, Applied Mathematics]
 horizontal: false
 ---
 
