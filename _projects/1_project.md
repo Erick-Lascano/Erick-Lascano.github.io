@@ -20,14 +20,14 @@ The goal was to apply data analysis techniques to uncover insights in the **Top 
         {% include figure.liquid loading="eager" path="assets/img/spotify_corr.jpg" title="Correlation Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pca_component.jpg" title="Percentage of the components " class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/pca_component.jpg" title="Percentage of the components" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/spotify_clusters.jpg" title="PCA Clusters" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Visualizations from the notebook: Feature Correlation Matrix (Left), Elbow Method for optimal K (Middle), and PCA projection of song clusters (Right).
+    Visualizations from the notebook: Feature Correlation Matrix (Left), PCA Feature Contributions, and Cumulative Explained Variance Plot(Right).
 </div>
 
 ### 🛠️ Key Technologies & Methods
@@ -42,7 +42,7 @@ The analysis was performed using the Python ecosystem, specifically:
 
 ### 📊 Results & Insights
 
-All the analysis is documented within the `Spotify_Data_Analysis.ipynb` notebook. Key findings include the identification of distinct clusters of songs that share similar "energy" and "danceability" profiles, providing a data-driven approach to playlist generation.
+All the analysis is documented within the [repository](https://github.com/Erick-Lascano/Data-Analysis-with-Python-Stanford-Continuing-Studies-CS-65W). Key findings include the identification of distinct clusters of songs that share similar "energy" and "danceability" profiles, providing a data-driven approach to playlist generation.
 
 The dataset used in this project is courtesy of Kaggle: [Top Spotify Songs 2023](https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023/data).
 
