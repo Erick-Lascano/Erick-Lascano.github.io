@@ -6,13 +6,14 @@ img: assets/img/spotify_cover.jpg
 importance: 1
 category: Data Science
 github: https://github.com/Erick-Lascano/Data-Analysis-with-Python-Stanford-Continuing-Studies-CS-65W
+related_publications: false
 ---
 
 This repository contains the final project for the **Stanford Continuing Studies** course on **Data Analysis with Python (CS 65W)**. The project focuses on Exploratory Data Analysis (EDA), Data Preprocessing, Data Visualization, and the implementation of unsupervised machine learning algorithms on a real-world dataset.
 
 ### 🎯 Project Goal
 
-The goal was to apply data analysis techniques to uncover insights in the **Top Spotify Songs 2023** dataset. By leveraging libraries like Pandas for manipulation and Scikit-Learn for clustering, we identified distinct patterns in musical features (danceability, energy, bpm) that define popular music today.
+The goal was to apply data analysis techniques to uncover insights in the **Top Spotify Songs 2023** dataset. By leveraging libraries like Pandas for manipulation and Scikit-Learn for clustering, we identified distinct patterns in musical features (danceability, energy, bpm) that define popular music today. This project demonstrates the skills and concepts learned during the course with instructor Matt Harrison.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -55,9 +56,7 @@ This project applies concepts from the course and the instructor's book, *"Effec
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
         <p><strong>Future Work:</strong> I plan to extend this analysis by integrating the Spotify API to pull real-time audio features and predict the popularity of new releases based on the identified clusters.</p>
+        <p><strong>Contributing:</strong> Contributions are welcome! Please create a pull request or open an issue to discuss improvements.</p>
+        <p><strong>License:</strong> This project is licensed under the MIT License.</p>
     </div>
 </div>
-</div>
-```
-
-{% endraw %}
