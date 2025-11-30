@@ -20,7 +20,7 @@ The goal was to apply data analysis techniques to uncover insights in the **Top 
         {% include figure.liquid loading="eager" path="assets/img/spotify_corr.jpg" title="Correlation Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/spotify_elbow.jpg" title="Elbow Method" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/pca_component.jpg" title="Percentage of the components " class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/spotify_clusters.jpg" title="PCA Clusters" class="img-fluid rounded z-depth-1" %}
