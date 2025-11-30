@@ -1,7 +1,7 @@
 ---
 layout: book-review
-title: 
-author: 
+title: The goodfather
+author: Mario Puzo
 cover: assets/img/book_covers/the_godfather.jpg
 olid: OL43499941M # use Open Library ID to fetch cover (if no `cover` is provided)
 isbn: 7539967447 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
