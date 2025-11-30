@@ -1,80 +1,62 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Spotify Data Analysis
+description: Unsupervised learning & EDA on Top 2023 Songs (Stanford CS 65W).
+img: assets/img/spotify_cover.jpg
 importance: 1
-category: work
-related_publications: true
+category: Data Science
+github: https://github.com/Erick-Lascano/Data-Analysis-with-Python-Stanford-Continuing-Studies-CS-65W
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This repository contains the final project for the **Stanford Continuing Studies** course on **Data Analysis with Python (CS 65W)**. The project focuses on Exploratory Data Analysis (EDA), Data Preprocessing, Data Visualization, and the implementation of unsupervised machine learning algorithms on a real-world dataset.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### 🎯 Project Goal
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The goal was to apply data analysis techniques to uncover insights in the **Top Spotify Songs 2023** dataset. By leveraging libraries like Pandas for manipulation and Scikit-Learn for clustering, we identified distinct patterns in musical features (danceability, energy, bpm) that define popular music today.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/spotify_corr.jpg" title="Correlation Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/spotify_elbow.jpg" title="Elbow Method" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/spotify_clusters.jpg" title="PCA Clusters" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Visualizations from the notebook: Feature Correlation Matrix (Left), Elbow Method for optimal K (Middle), and PCA projection of song clusters (Right).
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### 🛠️ Key Technologies & Methods
+
+The analysis was performed using the Python ecosystem, specifically:
+
+* **Pandas:** For rigorous data cleaning (handling encoding errors in the 'streams' column and missing values).
+* **Matplotlib & Seaborn:** For visualizing distributions of BPM, modes, and feature correlations.
+* **Scikit-Learn:**
+    * **PCA (Principal Component Analysis):** Dimensionality reduction to visualize high-dimensional data.
+    * **K-Means Clustering:** Grouping songs into distinct clusters based on audio features.
+
+### 📊 Results & Insights
+
+All the analysis is documented within the `Spotify_Data_Analysis.ipynb` notebook. Key findings include the identification of distinct clusters of songs that share similar "energy" and "danceability" profiles, providing a data-driven approach to playlist generation.
+
+The dataset used in this project is courtesy of Kaggle: [Top Spotify Songs 2023](https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023/data).
+
+### 📚 Additional Resources
+
+This project applies concepts from the course and the instructor's book, *"Effective Pandas: Patterns for Data Manipulation"* by Matt Harrison.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/spotify_dashboard.jpg" title="Data Overview" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <p><strong>Future Work:</strong> I plan to extend this analysis by integrating the Spotify API to pull real-time audio features and predict the popularity of new releases based on the identified clusters.</p>
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
 </div>
 ```
 
