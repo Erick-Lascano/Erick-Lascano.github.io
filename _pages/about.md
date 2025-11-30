@@ -8,7 +8,7 @@ profile:
   image: foto-prin.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Ziming Liu (刘子鸣)</p>
+    <p>Erick Lascano</p>
     <p>Researcher in AI + Science</p>
     <p>Email: A00836571@tec.mx</p>
     <p>or ericklascano99@gmail.com</p>
@@ -26,7 +26,7 @@ My research interests lie at the intersection of **Artificial Intelligence, Data
 
 * **Geometric & Topological Deep Learning:** Bridging pure mathematics and computation by applying Topological Data Analysis (TDA) and geometric principles to empower traditional multivariate statistical methods and capture structural invariants in data.
 
-* **Mathematical Foundations of Learning:** Exploring the theoretical strenghts of Deep Learning and Machine Learning** to develop models that are not only accurate but mathematically rigorous and interpretable.
+* **Mathematical Foundations of Learning:** Exploring the theoretical strenghts of Deep Learning and Machine Learning to develop models that are not only accurate but mathematically rigorous and interpretable.
 
 * **Operations Research:** Applying stochastic processes** (e.g., Brownian Motion, Markov Chains) and metaheuristics to model volatility in financial markets and solve complex logistics and resource allocation challenges.
 
@@ -36,8 +36,5 @@ My professional philosophy is guided by the responsibility and purposeful applic
 
 > "Those who have the privilege to know, have the duty to act."
 > — **Albert Einstein** (As cited in HackHarvard 2025 by Prof. Pawan Sinha regarding Project Prakash)
-
-* Topological Data Analysis and Deep Learning for Classifying AI-generated texts: [Springer CCIS, volume 2552]([https://www.quantamagazine.org/how-do-machines-grok-data-20240412/](https://link.springer.com/chapter/10.1007/978-3-031-97907-1_6))
-
 
 
