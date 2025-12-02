@@ -1,81 +1,74 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: MovieLens Recommendation System
+description: Collaborative filtering model on 10M dataset (HarvardX Capstone).
+img: assets/img/movielens_cover.jpg
 importance: 2
-category: work
-giscus_comments: true
+category: Data Science
+github: https://github.com/Erick-Lascano/Data-Science-Capstone-MovieLens-HarvardX
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project is the capstone for the **HarvardX Data Science Professional Certificate**. The objective was to build a recommendation system using the **MovieLens 10M dataset** capable of predicting user ratings with a Root Mean Square Error (RMSE) below **0.86490**.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The final solution implements a **Regularized Collaborative Filtering** model, inspired by the Netflix Prize-winning algorithms (*BellKor's Pragmatic Chaos*), achieving a final RMSE of **0.8641**.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### 🎯 Project Goal & Mathematical Foundation
+
+The core metric for evaluation is the RMSE, defined as:
+
+$$RMSE = \sqrt{\frac{1}{N}\sum_{u,i}(\hat{y}_{u,i} - y_{u,i})^2}$$
+
+Where $$y_{u,i}$$is the rating by user$$u$$for movie$$i$$, and $$N$$ is the total number of ratings. The goal was to minimize this error by modeling the inherent biases of users and movies.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/movielens_dist.jpg" title="Ratings Distribution" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/movielens_lambda.jpg" title="Lambda Tuning" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/movielens_heatmap.jpg" title="User-Movie Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Exploratory Analysis: Ratings distribution showing a bias towards integer values (Left), Regularization parameter tuning ($\lambda$) to minimize RMSE (Middle), and Sparsity visualization of the User-Movie matrix (Right).
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### 🛠️ Methodology: Regularized Effects
+
+The model improves upon a simple average by adding **bias terms** ($b$) that account for the fact that some movies are generally rated higher ($b_i$) and some users are more critical ($b_u$). To prevent overfitting on movies with few ratings, we applied **Regularization**:
+
+The regularized estimate for the movie effect $\hat{b}_i(\lambda)$ is calculated as:
+
+$$\hat{b}_i(\lambda) = \frac{\sum_{u=1}^{n_i} (y_{u,i} - \hat{\mu})}{n_i + \lambda}$$
+
+Where $\lambda$ (lambda) is a tuning parameter that penalizes estimates from small sample sizes ($n_i$). The final model equation becomes:
+
+$$\hat{y}_{u,i} = \hat{\mu} + \hat{b}_i(\lambda) + \hat{b}_u(\lambda)$$
+
+### 📊 Results & Performance
+
+The model was trained on the `edx` set (90% of data) and validated on a held-out set. We tuned $\lambda$ using cross-validation.
+
+* **Optimal Lambda ($\lambda$):** 5
+* **Final RMSE:** 0.8641
+
+This result successfully surpassed the target threshold, demonstrating that a linear model with careful regularization can capture significant variance in user preferences without the computational cost of matrix factorization or deep learning.
+
+### 📚 Technologies Used
+
+* **R & RStudio:** Core statistical computing.
+* **Tidyverse:** For efficient data manipulation and visualization (`ggplot2`, `dplyr`).
+* **Caret:** For machine learning workflows and data partitioning.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/movielens_results.jpg" title="Model Results" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <br>
+        <p><strong>Conclusion:</strong> The project demonstrates the power of regularized bias models in recommendation systems. Future improvements could involve Matrix Factorization (SVD) or Neural Collaborative Filtering.</p>
+        <p><strong>References:</strong> Koren, Y. (2009). The BellKor solution to the Netflix Grand Prize.</p>
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
