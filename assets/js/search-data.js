@@ -412,9 +412,9 @@ ninja.data = [{
           description: "Collaborative filtering model on 10M dataset (HarvardX Capstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-stochastic-optimization-for-reforestation",
+          title: 'Stochastic Optimization for Reforestation',
+          description: "Metaheuristic allocation of plant species to minimize ecosystem competition.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
