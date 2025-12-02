@@ -20,19 +20,25 @@ $$RMSE = \sqrt{\frac{1}{N}\sum_{u,i}(\hat{y}_{u,i} - y_{u,i})^2}$$
 
 Where $$y_{u,i}$$is the rating by user$$u$$for movie$$i$$, and $$N$$ is the total number of ratings. The goal was to minimize this error by modeling the inherent biases of users and movies.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/movielens_dist.jpg" title="Ratings Distribution" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-sm-center">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/distribution-plot.png" title="Ratings Distribution" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/movielens_lambda.jpg" title="Lambda Tuning" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Ratings-peruser.png" title="Ratings per User" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/movielens_heatmap.jpg" title="User-Movie Matrix" class="img-fluid rounded z-depth-1" %}
+</div>
+
+<div class="row justify-content-sm-center mt-3">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ratins-genre.png" title="Ratings by Genre" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/topmovies.png" title="Top Movies" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Exploratory Analysis: Ratings distribution showing a bias towards integer values (Left), Regularization parameter tuning ($\lambda$) to minimize RMSE (Middle), and Sparsity visualization of the User-Movie matrix (Right).
+    <strong>Exploratory Data Analysis:</strong> (Top-Left) Global distribution of ratings showing integer bias. (Top-Right) Long-tail distribution of ratings per user. (Bottom-Left) Average rating variability across genres. (Bottom-Right) Top movies with the highest number of ratings.
 </div>
 
 ### 🛠️ Methodology: Regularized Effects
@@ -43,32 +49,26 @@ The regularized estimate for the movie effect $\hat{b}_i(\lambda)$ is calculated
 
 $$\hat{b}_i(\lambda) = \frac{\sum_{u=1}^{n_i} (y_{u,i} - \hat{\mu})}{n_i + \lambda}$$
 
-Where $\lambda$ (lambda) is a tuning parameter that penalizes estimates from small sample sizes ($n_i$). The final model equation becomes:
+Where $\lambda$ is a tuning parameter that penalizes estimates from small sample sizes ($n_i$). The final model equation becomes:
 
 $$\hat{y}_{u,i} = \hat{\mu} + \hat{b}_i(\lambda) + \hat{b}_u(\lambda)$$
 
-### 📊 Results & Performance
+### 📊 Results & Conclusion
 
-The model was trained on the `edx` set (90% of data) and validated on a held-out set. We tuned $\lambda$ using cross-validation.
+The model was trained on the `edx` set (90% of data) and validated on a held-out set. The optimal regularization parameter was found to be $\lambda = 5$.
 
-* **Optimal Lambda ($\lambda$):** 5
-* **Final RMSE:** 0.8641
+* **Target RMSE:** < 0.86490
+* **Final RMSE:** **0.8641** (Success)
 
-This result successfully surpassed the target threshold, demonstrating that a linear model with careful regularization can capture significant variance in user preferences without the computational cost of matrix factorization or deep learning.
+This result demonstrates that a linear model with careful regularization can capture significant variance in user preferences without the computational cost of matrix factorization.
 
 ### 📚 Technologies Used
 
 * **R & RStudio:** Core statistical computing.
-* **Tidyverse:** For efficient data manipulation and visualization (`ggplot2`, `dplyr`).
-* **Caret:** For machine learning workflows and data partitioning.
+* **Tidyverse:** For efficient data manipulation (`dplyr`) and visualization (`ggplot2`).
+* **Caret:** For machine learning workflows.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/movielens_results.jpg" title="Model Results" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <br>
-        <p><strong>Conclusion:</strong> The project demonstrates the power of regularized bias models in recommendation systems. Future improvements could involve Matrix Factorization (SVD) or Neural Collaborative Filtering.</p>
-        <p><strong>References:</strong> Koren, Y. (2009). The BellKor solution to the Netflix Grand Prize.</p>
-    </div>
+<br>
+<div class="alert alert-light">
+    <p><strong>References:</strong> Koren, Y. (2009). The BellKor solution to the Netflix Grand Prize.</p>
 </div>
