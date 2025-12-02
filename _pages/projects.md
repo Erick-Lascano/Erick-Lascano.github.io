@@ -63,3 +63,12 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
+
+<style>
+  .card-title {
+    font-size: 1.1rem !important; /* Reduce un poco el tamaño de letra */
+    letter-spacing: -0.5px !important; /* Junta las letras un poquito más */
+    word-break: normal !important; /* Prohíbe romper la palabra a la mitad */
+    overflow-wrap: normal !important;
+  }
+</style>
