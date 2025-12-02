@@ -68,7 +68,5 @@ This result demonstrates that a linear model with careful regularization can cap
 * **Tidyverse:** For efficient data manipulation (`dplyr`) and visualization (`ggplot2`).
 * **Caret:** For machine learning workflows.
 
-<br>
-<div class="alert alert-light">
-    <p><strong>References:</strong> Koren, Y. (2009). The BellKor solution to the Netflix Grand Prize.</p>
-</div>
+---
+**References:** Koren, Y. (2009). *The BellKor solution to the Netflix Grand Prize.*
