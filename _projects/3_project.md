@@ -1,81 +1,62 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Stochastic Optimization for Reforestation
+description: Metaheuristic allocation of plant species to minimize ecosystem competition.
+img: assets/img/reforest_cover.jpg
 importance: 3
-category: work
+category: Applied Mathematics
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This research project addresses the critical challenge of **Reforestation Optimization** in Mexico. Using **Stochastic Optimization** and **Metaheuristic Algorithms**, we designed a mathematical model to distribute 10 different plant species across a 1-hectare grid ($14 \times 47$ layout), maximizing survival rates by minimizing inter-species competition.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### 🎯 Mathematical Formulation
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The problem was modeled as a **Combinatorial Optimization Problem** on a grid $G = \{(i, j) | 1 \le i \le 14, 1 \le j \le 47\}$. The goal is to assign a species $k$ to each cell to minimize the global competition index $Z$, subject to nutrient availability and adjacency constraints (modeled using the "Tres Bolillo" planting system).
+
+The objective function can be defined as:
+
+$$\min Z = \sum_{(i,j) \in G} \sum_{(u,v) \in N(i,j)} C(s_{i,j}, s_{u,v})$$
+
+Where:
+* $N(i,j)$ is the set of neighboring cells (adjacency) for position $(i,j)$.
+* $s_{i,j}$ is the species assigned to cell $(i,j)$.
+* $C(a, b)$ is the **Competition Coefficient** between species $a$ and $b$ (derived from nutrient matrices).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/reforest_grid.jpg" title="Planting Grid Layout" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/reforest_competence.jpg" title="Competition Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/reforest_results.jpg" title="Algorithm Comparison" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Methodology Visualization: (Left) The $14 \times 47$ simulation grid. (Middle) Heatmap representing the inter-species competition matrix. (Right) Convergence results comparing Simulated Annealing vs. PSO.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### 🛠️ Algorithms & Methodology
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Given the combinatorial complexity (assigning 524 new plants from 10 species into empty slots), exact methods were computationally infeasible. We implemented and compared three **Metaheuristic Algorithms**:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+1.  **Simulated Annealing (SA):** A probabilistic technique approximating the global optimum by mimicking the cooling of metals.
+2.  **Particle Swarm Optimization (PSO):** A population-based algorithm inspired by bird flocking behavior.
+3.  **Sine Cosine Algorithm (SCA):** A mathematical optimization method using trigonometric functions to explore the search space.
 
-{% raw %}
+### 📊 Results & Impact
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+We evaluated the performance of each algorithm based on the final **Competition Score** and convergence time.
 
-{% endraw %}
+* **Optimal Solution:** The **Simulated Annealing** algorithm provided the most stable configuration with the lowest competition index.
+* **Species Distribution:** The model successfully adhered to the constraints of fixed specimen counts (e.g., 196 *Agave salmiana*, 86 *Prosopis laevigata*) while ensuring spatial diversity.
+
+The final output is a coordinate map that forestry engineers can use to plant specimens in a way that mathematically guarantees better resource usage and long-term ecosystem stability.
+
+### 📚 Technologies Used
+
+* **Python:** Main simulation language.
+* **NumPy:** For matrix manipulations and grid operations.
+* **Matplotlib:** For visualizing the planting distribution maps.
