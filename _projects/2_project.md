@@ -22,7 +22,7 @@ Where $$y_{u,i}$$is the rating by user$$u$$for movie$$i$$, and $$N$$ is the tota
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/distribution-plot.png" title="Ratings Distribution" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Distribution-plot.png" title="Ratings Distribution" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Ratings-peruser.png" title="Ratings per User" class="img-fluid rounded z-depth-1" %}
