@@ -12,7 +12,11 @@ This research project addresses the critical challenge of **Reforestation Optimi
 
 ### 🎯 Mathematical Formulation
 
-The problem was modeled as a **Combinatorial Optimization Problem** on a grid $G = \{(i, j) | 1 \le i \le 14, 1 \le j \le 47\}$. The goal is to assign a species $k$ to each cell to minimize the global competition index $Z$, subject to nutrient availability and adjacency constraints (modeled using the "Tres Bolillo" planting system).
+The problem was modeled as a **Combinatorial Optimization Problem** on a rectangular grid. The spatial domain $$G$$ is defined as:
+
+$$G = \{(i, j) \in \mathbb{Z}^2 \mid 1 \le i \le 14, \quad 1 \le j \le 47\}$$
+
+The goal is to assign a species $$k$$to each cell to minimize the global competition index$$Z$$. This assignment is subject to nutrient availability and adjacency constraints, modeled using the **"Tres Bolillo"** (triangular) planting system to optimize space.
 
 The objective function can be defined as:
 
