@@ -407,9 +407,9 @@ ninja.data = [{
           description: "Unsupervised learning &amp; EDA on Top 2023 Songs (Stanford CS 65W).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-movielens-recommendation-system",
+          title: 'MovieLens Recommendation System',
+          description: "Collaborative filtering model on 10M dataset (HarvardX Capstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
