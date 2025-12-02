@@ -2,7 +2,7 @@
 layout: page
 title: Stochastic Optimization for Reforestation
 description: Metaheuristic allocation of plant species to minimize ecosystem competition.
-img: assets/img/reforest_cover.jpg
+img: assets/img/cover.jpg
 importance: 3
 category: Applied Mathematics
 related_publications: false
@@ -23,19 +23,22 @@ Where:
 * $s_{i,j}$ is the species assigned to cell $(i,j)$.
 * $C(a, b)$ is the **Competition Coefficient** between species $a$ and $b$ (derived from nutrient matrices).
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/reforest_grid.jpg" title="Planting Grid Layout" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/reforest_result.jpg" title="Competition Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+</div>
+
+<div class="row justify-content-sm-center mt-3">
+    <div class="col-sm-10 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/reforest_comparison.jpg" title="Algorithm Comparison" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Methodology Visualization: (Left) The $14 \times 47$ initial grid where 9 types of plants were already allocated. (Middle) Heatmap representing the final distribution of plants in the grid. (Right) Results comparing the algorithms used. 
+    Methodology Visualization: (Top-Left) The $14 \times 47$ initial grid where 9 types of plants were already allocated. (Top-Right) Heatmap representing the final distribution of plants in the grid. (Bottom) Results comparing the convergence of algorithms used.
 </div>
 
 ### 🛠️ Algorithms & Methodology
@@ -60,4 +63,3 @@ The final output is a coordinate map that forestry engineers can use to plant sp
 * **Python:** Main simulation language.
 * **NumPy:** For matrix manipulations and grid operations.
 * **Matplotlib:** For visualizing the planting distribution maps.
-
