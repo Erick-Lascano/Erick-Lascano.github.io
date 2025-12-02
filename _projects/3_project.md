@@ -2,7 +2,7 @@
 layout: page
 title: Stochastic Optimization for Reforestation
 description: Metaheuristic allocation of plant species to minimize ecosystem competition.
-img: assets/img/reforest_cover.jpg
+img: assets/img/cover.jpg
 importance: 3
 category: Applied Mathematics
 related_publications: false
