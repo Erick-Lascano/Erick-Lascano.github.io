@@ -108,8 +108,3 @@ We evaluated the performance of each algorithm based on the final **Competition 
 * **NumPy:** For matrix manipulations and grid operations.
 * **Matplotlib:** For visualizing the planting distribution maps.
 
-### 📚 Technologies Used
-
-* **Python:** Main simulation language.
-* **NumPy:** For matrix manipulations and grid operations.
-* **Matplotlib:** For visualizing the planting distribution maps.
