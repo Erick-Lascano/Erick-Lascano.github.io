@@ -4,7 +4,7 @@ title: Heart Disease Diagnosis Pipeline
 description: Comparative analysis of SVM, Neural Networks, and Probabilistic Clustering for clinical prediction.
 img: assets/img/heart_cover.jpg
 importance: 1
-category: Machine Learning & Healthcare
+category: Data Science
 related_publications: false
 ---
 
