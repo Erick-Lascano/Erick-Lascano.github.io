@@ -417,9 +417,9 @@ ninja.data = [{
           description: "Metaheuristic allocation of plant species to minimize ecosystem competition.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-heart-disease-diagnosis-pipeline",
+          title: 'Heart Disease Diagnosis Pipeline',
+          description: "Comparative analysis of SVM, Neural Networks, and Probabilistic Clustering for clinical prediction.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-project-5",
