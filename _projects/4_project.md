@@ -5,6 +5,7 @@ description: Comparative analysis of SVM, Neural Networks, and Probabilistic Clu
 img: assets/img/heart_cover.jpg
 importance: 1
 category: Data Science
+github: https://github.com/Erick-Lascano/Data-Science-Capstone-CYO-HarvardX
 related_publications: false
 ---
 
