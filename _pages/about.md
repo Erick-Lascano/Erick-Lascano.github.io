@@ -30,7 +30,7 @@ My research interests lie at the intersection of **Artificial Intelligence, Data
 
 * **Operations Research:** Applying stochastic processes (e.g., Brownian Motion, Markov Chains) and metaheuristics to model volatility in financial markets and solve complex logistics and resource allocation challenges.
 
-Currently, I am working as an **Advanced Analytics Intern at Crediclub**, where I engineer graph-based fraud detection pipelines through the use of interpretable ML models using Neo4j and PySpark. Previously, I collaborated on academia-industry projects applying TDA to fuel price volatility (SLB) and optimization algorithms for reforestation (CONAFOR).
+My last industry experience was as an **Advanced Analytics Intern at Crediclub**, where I engineered graph-based fraud detection pipelines through the use of interpretable ML models using Neo4j and PySpark. Previously, I collaborated on academia-industry projects applying TDA to fuel price volatility (SLB) and optimization algorithms for reforestation (CONAFOR).
 
 My professional philosophy is guided by the responsibility and purposeful application of knowledge and science, best captured by a quote that motivates my work:
 
