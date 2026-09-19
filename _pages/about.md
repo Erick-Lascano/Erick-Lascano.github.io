@@ -18,7 +18,7 @@ news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 ---
 
-Hi! I’m **Erick**, a graduate student in **Applied Mathematics** at [Columbia University], expecting to graduate in December 2027. My research journey is driven by the convergence of rigorous mathematical methods and the predictive power of computing and data. 
+Hi! I’m **Erick**, a graduate student in **Applied Mathematics** at **Columbia University**, expecting to graduate in December 2027. My research journey is driven by the convergence of rigorous mathematical methods and the predictive power of computing and data. 
 
 My research interests lie at the intersection of **Artificial Intelligence, Data Science, and Mathematics**, with a specific focus on:
 
