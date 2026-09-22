@@ -10,7 +10,7 @@ profile:
   more_info: >
     <p>Erick Lascano</p>
     <p>Data Scientist and Mathematical Engineer</p>
-    <p>Email: A00836571@tec.mx</p>
+    <p>Email: el3537@columbia.edu</p>
     <p>or ericklascano99@gmail.com</p>
 
 social: true # includes social icons at the bottom of the page
